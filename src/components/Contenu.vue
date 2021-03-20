@@ -13,13 +13,11 @@
             </div>
 
             <h3>Select Box</h3>
-
             <select v-on:input="toggleResult" v-model="formData.select">
                 <option v-bind:key="index" v-for="(pays, index) in formData.listePays">{{ pays }}</option>
             </select>
 
             <h3 class="mt-3">CheckBoxs</h3>
-
             <div class="form-check">
                 <input v-on:input="toggleResult" v-model="formData.checkFruits" value="fraise" id="fraise" type="checkbox" class="form-check-input">
                 <label for="fraise">Fraise</label>
@@ -45,7 +43,9 @@
 
                         <p>Résultats checkbox</p>
                         <ul>
-                            <li v-bind:key="index" v-for="(fruit, index) in formData.checkFruits"> {{ fruit }}</li>
+                            <li v-bind:key="index" v-for="(fruit, index) in formData.checkFruits">
+                                {{ fruit }}
+                            </li>
                         </ul>
                         <p>Choix du select : {{ formData.select }}</p>
                     </div>
