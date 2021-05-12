@@ -1,6 +1,7 @@
 <template>
     <div class="container mt-5">
         <h1>Notre premier formulaire </h1>
+
         <form>
             <div class="form-group">
                 <label for="prenom">Ton prénom</label>
@@ -35,6 +36,7 @@
 
             <button v-on:click.prevent="envoiForm" class="btn btn-primary mt-3 mb-3">Envoyez les données</button>
         </form>
+        
         <div v-if="infoSubmit">
             <h2>Résultats</h2>
                     <div class="card p-3">
